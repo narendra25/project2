@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body 
+    <h1>Student information</h1>
+    {% if student %}
+    <table>
+      <thead>
+        <th>Student Number</th>
+        <th>Student Name</th>
+        <th>Student course</th>
+        <th>Student marks</th>
+      </thead>
+      {% for sdt in student %}
+                <tr>
+                   <td>{{sdt.sno}}</td>
+                   <td>{{sdt.sname}}</td>
+                   <td>{{sdt.scourse}}</td>
+                  <td>{{sdt.smarks}}</td>
+                 </tr>
+           {%endfor%}
+         </table>
+         {%else%}
+             <p>no Employee Records Found!!!!!!!!!!</p>
+      {%endif%}
+  </body>
+</html>
